@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Result Portal</title>
+  <link rel="stylesheet" href="milan.css">
+  <style>
+    
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    h2 { text-align: center; }
+    label { display: block; margin-top: 10px; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; }
+    
+    .result { margin-top: 20px; padding: 15px; border: 1px solid #ccc; }
+    .footer { margin-top: 20px; font-size: 12px; color: #555; }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo (1).png" alt="">
+    
+    <!-- Search Section -->
+    <form id="searchForm">
+      <label>Session:</label>
+      <select>
+        <option>Winter 2025</option>
+        <option>Summer 2025</option>
+      </select>
+      
+      <label>Exam:</label>
+      <select>
+          <option value="">BE SEM 2 - WINTER 2025</option>
+                    <option value="">BE SEM 3 - WINTER 2025</option>
+
+      </select>
+      
+      <label>Enroll No:</label>
+      <input type="text" required max="12" inputmode="numeric">
+      
+      <label>Password:</label>
+      <input type="password" required>
+      
+      <label>Code:</label>
+      <input type="text" placeholder="Enter captcha" required>
+<a href="kotlin.html" class="btn">
+  
+ Search
+</a>      
+
+      
+    </form>
+    
+    <!-- Result Section -->
+    <div class="result" id="resultBox" style="display:none;">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Enrollment No:</strong> 123456</p>
+      <p><strong>Exam Seat No:</strong> 78910</p>
+      <p><strong>Declared On:</strong> 01-Jan-2026</p>
+      <p><strong>Exam:</strong> BA SEM 10</p>
+      <p><strong>Branch:</strong> Computer Science</p>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      This is a computer-generated provisional result. Please consider the hard-copy gradesheet as final.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("resultBox").style.display = "block";
+    });
+  </script>
+</body>
+</html>
